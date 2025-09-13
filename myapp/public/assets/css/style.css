@@ -20,7 +20,7 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #172624; /* Color for headings, subheadings and title throughout the website */
@@ -144,90 +144,101 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+/* --- HEADER CUSTOM --- */
 .header {
-  color: var(--default-color);
-  transition: all 0.5s;
-  z-index: 997;
-  background-color: var(--background-color);
+  background: linear-gradient(90deg, #09947d 0%, #172624 100%);
+  box-shadow: 0 4px 24px rgba(9,148,125,0.08);
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  padding-bottom: 0.5rem;
+}
+
+.header .logo h1.sitename {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(9,148,125,0.15);
+  letter-spacing: 2px;
+}
+
+.header .navmenu ul li a {
+  border-radius: 8px;
+  margin: 0 2px;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.header .navmenu ul li a.active,
+.header .navmenu ul li a:hover {
+  background: #fff;
+  color: #09947d !important;
+  box-shadow: 0 2px 8px rgba(9,148,125,0.08);
 }
 
 .header .topbar {
-  background-color: var(--background-color);
-  height: 40px;
-  padding: 0;
-  font-size: 14px;
-  transition: all 0.5s;
+  background: #172624;
+  color: #fff;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
 }
 
-.header .topbar .contact-info i {
-  font-style: normal;
-  color: var(--contrast-color);
-}
-
-.header .topbar .contact-info i a,
-.header .topbar .contact-info i span {
-  padding-left: 5px;
-  color: var(--contrast-color);
-}
-
-@media (max-width: 575px) {
-
-  .header .topbar .contact-info i a,
-  .header .topbar .contact-info i span {
-    font-size: 13px;
-  }
-}
-
-.header .topbar .contact-info i a {
-  line-height: 0;
-  transition: 0.3s;
-}
-
-.header .topbar .contact-info i a:hover {
-  color: var(--contrast-color);
-  text-decoration: underline;
+.header .topbar .contact-info a {
+  color: #00ffe7;
+  font-weight: 500;
 }
 
 .header .topbar .social-links a {
-  color: color-mix(in srgb, var(--contrast-color), transparent 40%);
-  line-height: 0;
-  transition: 0.3s;
-  margin-left: 20px;
+  color: #fff;
+  opacity: 0.7;
+  margin-left: 10px;
+  transition: color 0.2s, opacity 0.2s;
 }
-
 .header .topbar .social-links a:hover {
-  color: var(--contrast-color);
+  color: #00ffe7;
+  opacity: 1;
 }
 
-.header .branding {
-  min-height: 60px;
-  padding: 10px 0;
+/* --- FOOTER CUSTOM --- */
+.footer {
+  background: linear-gradient(90deg, #172624 0%, #09947d 100%);
+  color: #fff;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 -4px 24px rgba(9,148,125,0.08);
+  padding: 40px 0 20px 0;
 }
 
-.header .logo {
-  line-height: 1;
+.footer a, .footer .footer-links ul a {
+  color: #00ffe7;
+  transition: color 0.2s;
+}
+.footer a:hover, .footer .footer-links ul a:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
-.header .logo img {
-  max-height: 36px;
+.footer .social-links a {
+  background: #09947d;
+  color: #fff;
+  border-radius: 50%;
   margin-right: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.footer .social-links a:hover {
+  background: #fff;
+  color: #09947d;
 }
 
-.header .logo h1 {
-  font-size: 30px;
-  margin: 0;
+.footer h4, .footer .footer-about a {
+  color: #fff;
   font-weight: 700;
-  color: var(--heading-color);
+  letter-spacing: 1px;
 }
 
-.scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-}
-
-.scrolled .header .topbar {
-  height: 0;
-  visibility: hidden;
-  overflow: hidden;
+.footer .copyright {
+  border-top: 1px solid rgba(255,255,255,0.12);
+  margin-top: 30px;
+  padding-top: 15px;
+  color: #c7f7f0;
+  font-size: 15px;
 }
 
 /*--------------------------------------------------------------
