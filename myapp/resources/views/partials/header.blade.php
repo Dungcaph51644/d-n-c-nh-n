@@ -50,6 +50,16 @@
             </li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+          <div class="auth-buttons ms-4 d-flex align-items-center">
+<div class="auth-dropdown ms-4 position-relative">
+  <button class="btn-user-icon" id="userDropdownBtn">
+    <i class="bi bi-person-circle"></i>
+  </button>
+  <div class="auth-menu" id="userDropdownMenu">
+    <a href="/login" class="btn btn-login w-100 mb-2">Đăng nhập</a>
+    <a href="/register" class="btn btn-register w-100">Đăng ký</a>
+  </div>
+</div>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
